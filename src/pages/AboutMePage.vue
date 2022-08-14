@@ -1,16 +1,68 @@
 <template>
   <div class="q-pa-md">
-    <q-infinite-scroll @load="onLoad" :offset="250">
-      <div v-for="(item, index) in items" :key="index" class="caption">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam, ea at omnis vel numquam exercitationem aut, natus minima, porro labore.</p>
-      </div>
-      <template v-slot:loading>
-        <div class="row justify-center q-my-md">
-          <q-spinner-dots color="primary" size="40px" />
-        </div>
-      </template>
-    </q-infinite-scroll>
+    
+    <p class="text-h3 text-center q-pt-xl">¿Quién soy?</p>
+
+    <div class="row items-center justify-evenly">
+      <q-img
+        class="col-6 personalImage"
+        src="~assets/personalImage.jpg"
+        width="280px"
+        length="280px"
+        alt="Picture of me" 
+        
+      >
+
+        <template v-slot:loading>
+          <q-spinner-gears color="white" />
+        </template>
+      </q-img>
+      <p class="col-6 text-subtitle1">
+        Soy un ingeniero informático con experiencia en desarrollo web.
+        Quiero profesionalizarme en Ruby on Rails, por lo que en mi tiempo libre
+        profundizo y aprendo este framework desarrollando varias aplicaciones.
+        Me encanta conocer personas nuevas con las cuales poder afrontar nuevos retos
+        como equipo. Me gusta colaborar y poner mi granito de arena para que este
+        mundo sea un poquito mejor, por lo que he participado en algunas iniciativas sin
+        ánimo de lucro como desarrollador Android para ayudar a niños con autismo.
+      </p>
+    </div>
   </div>
+
+  <div class="q-pt-xl">
+
+    <p class="text-h3 text-center q-pt-xl">¿Qué puedo aportar?</p>
+
+    <div class="row items-center justify-evenly">
+      
+      <p class="col-6 text-subtitle1">
+        Soy un ingeniero informático con experiencia en desarrollo web.
+        Quiero profesionalizarme en Ruby on Rails, por lo que en mi tiempo libre
+        profundizo y aprendo este framework desarrollando varias aplicaciones.
+        Me encanta conocer personas nuevas con las cuales poder afrontar nuevos retos
+        como equipo. Me gusta colaborar y poner mi granito de arena para que este
+        mundo sea un poquito mejor, por lo que he participado en algunas iniciativas sin
+        ánimo de lucro como desarrollador Android para ayudar a niños con autismo.
+      </p>
+
+      <q-img
+        class="col-6 personalImage"
+        src="~assets/personalImage.jpg"
+        width="280px"
+        length="280px"
+        alt="Picture of me" 
+        
+      >
+
+        <template v-slot:loading>
+          <q-spinner-gears color="white" />
+        </template>
+      </q-img>
+
+    </div>
+
+  </div>
+
 </template>
 
 <script>
@@ -18,17 +70,19 @@ import { ref } from 'vue'
 
 export default {
   setup () {
-    const items = ref([ {}, {}, {}, {}, {}, {}, {} ])
 
     return {
-      items,
-      onLoad (index, done) {
-        setTimeout(() => {
-          items.value.push({}, {}, {}, {}, {}, {}, {})
-          done()
-        }, 2000)
-      }
+      
     }
   }
 }
 </script>
+
+<style scoped>
+
+.personalImage {
+  border-radius: 100%;
+  border: 10px solid rgba(255, 166, 0, .8);
+}
+
+</style>
