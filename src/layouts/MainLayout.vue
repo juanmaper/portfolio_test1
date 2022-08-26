@@ -2,10 +2,20 @@
   <q-layout view="lHh Lpr lFf" class="background">
     
     <q-header class="header">     
-      <q-tabs align="right" no-caps>
-          <q-route-tab name="aboutMe" label="Sobre mí" to="/" exact/>
-          <q-route-tab name="projects" label="Proyectos" to="projects" exact/>
-      </q-tabs>
+      <div class="row justify-center"> 
+        <q-tabs align="right" no-caps class="col-6" indicator-color="transparent">
+
+          <q-route-tab active-class="active-route" class="circularTabs q-mt-xl q-mr-md" 
+            name="aboutMe" label="Sobre mí" to="/" exact
+          />
+
+          <q-route-tab active-class="active-route" class="circularTabs q-mt-xl q-mr-xl" 
+            name="projects" label="Proyectos" to="projects" exact
+          />
+
+        </q-tabs> 
+      </div>
+      
     </q-header>
     
     <q-page-container>
@@ -42,5 +52,16 @@ export default defineComponent({
 .header {
   background-color: rgba(0, 0, 0, 0);
 }
+
+.circularTabs {
+  border-radius: 50px;
+  border: 1px solid #fff;
+}
+
+.active-route {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
 
 </style>
