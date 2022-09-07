@@ -1,10 +1,10 @@
 <template>
   <video
-          src="backgroundVideo.mp4" muted
-          autoplay
-          loop />
+        src="backgroundVideo.mp4" muted
+        autoplay
+        loop />
 
-  <h1 class="text-h3 centerText fixed-center matriverRegularFont">I am Juanma</h1>
+  <h1 class="text-h3 centerText absolute-center matriverRegularFont">I am Juanma</h1>
 
   <q-layout view="lHh Lpr lFf">
     
@@ -78,7 +78,7 @@ export default defineComponent({
 
 .circularTabs {
   border-radius: 50px;
-  border: 1px solid $vue-secondary;
+  border: 1px solid #fff;
   background-color: $vue-primary;
 }
 
@@ -95,11 +95,7 @@ export default defineComponent({
 }
 
 video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
+
   min-width: 100%;
   min-height: 100%;
 }
