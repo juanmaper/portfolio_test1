@@ -1,6 +1,10 @@
 <template>
-  <div class="container absolute-center">
-    <q-img src="~assets/personalImage.jpg" height="100%" width="100%" />
+  <div class="container fullscreen">
+    <!-- <video
+          src="backgroundVideo.mp4" muted
+          autoplay
+          loop /> -->
+          <!-- <q-img src="~assets/personalImage.jpg" height="100%" width="100%" fit="fill" /> -->
   </div>
 
   <!-- <h1 class="text-h3 centerText absolute-center matriverRegularFont">I am Juanma</h1> -->
@@ -65,14 +69,14 @@ export default defineComponent({
 }
 
 .container {
-  height: 500px;
-  width: 500px;
+ 
   background-color: red;
 }
 
 video {
-  height: 700px;
+  height: 100%;
   width: 100%;
+  object-fit: fill;
 }
 
 
