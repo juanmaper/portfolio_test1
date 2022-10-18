@@ -1,4 +1,4 @@
-# Portfolio (portfolio)
+# Portfolio test (deprecated)
 
 Portfolio made in Vue.js using Quasar
 
